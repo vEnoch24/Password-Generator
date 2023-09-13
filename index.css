@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: sans-serif; */
+}
+
+html {
+    background-color: white;
+    overflow: hidden;
+}
+
+section{
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.466);
+    background-color: rgba(168, 193, 207, 0.459);
+}
+
+section .title{
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+    font-family: cursive;
+    letter-spacing: 0.5em;
+
+}
+
+
+.content{
+    width: 800px;
+    position: absolute;
+    top: 30%;
+    left: 26%;
+    text-align: center;
+    color: white;
+    justify-content: center;  
+}
+
+.criteria{   
+    margin: 5px;
+    margin-top: 50px;
+    left: 40%;
+    position: relative;
+}
+
+.criteria label{
+    font-size: larger;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+.criteria .password-length {
+    padding: 6px;
+    width: 60px;
+    font-weight: 900;
+    font-size: larger;
+    color: rgb(0, 183, 255);
+}
+
+.content #display {
+   width: 100%;
+   padding: 20px;
+   font-size: 2em;
+   font-weight: bolder;
+   text-align: center;
+   /* letter-spacing: 1px; */
+   color: black;
+   border-radius: 15px;
+   margin-top: 3vh;
+}
+
+.content #generate {
+    margin: 20px 10px;
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    border: 2px solid rgb(0, 183, 255);
+    background: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    font-family: cursive;
+    margin-top: 5vh;
+}
+
+.content #clear{
+    margin: 20px 10px;
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    border: 2px solid rgb(255, 0, 0);
+    background: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    transition: all 0.14s;
+    font-family: cursive;
+}
+
+ #btn-over {
+    background: rgb(0, 183, 255);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;  
+    transition: all 0.15s;  
+}
+
+#btn-over2 {
+    background: rgb(255, 0, 0);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;  
+    transition: all 0.15s;
+}
+
+
+.content #generate:hover #btn-over{
+    width: 100%;
+}
+
+.content #clear:hover #btn-over2{
+    width: 100%;
+}
+
+.content #generate:hover {
+    border: none;
+    color: white;
+}
+
+.content #clear:hover {
+    border: none;
+    color: white;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 600px){
+    section .title{
+        font-size: 15px;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+        font-family: cursive;
+        letter-spacing: 0.5em;   
+    }
+    .content {
+        width: 50%;
+        left: 20%;
+        margin-top: 10px;     
+    }
+    .content #display {
+        width: 100%;
+        padding: 20px;
+        font-size: 0.8em;
+        font-weight: bolder;
+        text-align: center;
+        color: black;
+        border-radius: 15px;
+        margin-top: 0vh;
+     }
+    .criteria{  
+        max-width: 50%; 
+        margin: 2px;
+        margin-top: 50px;
+        left: 25%;
+        position: relative;
+    }
+    .criteria label{
+        font-size: large;
+        font-weight: bolder;
+        font-family: cursive;
+    }
+    
+    .criteria .password-length {
+        padding: 6px;
+        width: 40px;
+        font-weight: 900;
+        font-size: larger;
+        color: rgb(0, 183, 255);
+    }
+    .content #generate {
+        /* margin: 2px 10px; */
+        left: 2px;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+        border: 2px solid rgb(0, 183, 255);
+        background: transparent;
+        border-radius: 25px;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+        font-family: cursive;
+        margin-top: 5vh;
+    }   
+    .content #clear{
+        margin: 20px 10px;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+        border: 2px solid rgb(255, 0, 0);
+        background: transparent;
+        border-radius: 25px;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+        transition: all 0.14s;
+        font-family: cursive;
+    }
+}
+
+@media screen and (max-width: 400px){
+    section .title{
+        font-size: 10px;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+        font-family: cursive;
+        letter-spacing: 0.5em;   
+    }
+    .criteria{  
+        max-width: 50%; 
+        margin: 2px;
+        margin-top: 50px;
+        left: 25%;
+        position: relative;
+    }
+    .criteria label{
+        font-size: 15px;
+        font-weight: bolder;
+        font-family: cursive;
+    }
+    
+}
